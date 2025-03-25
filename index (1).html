@@ -3,69 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Defender</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Modern Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #555;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .hero h1 {
+            font-size: 32px;
+            color: #333;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #666;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            background: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #005f73;
+        }
+        .contact {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .contact input, .contact textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact button {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .contact button:hover {
+            background: #1e7e34;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Cyber Defender</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h2>Welcome to Cyber Defender</h2>
-        <p>Your trusted cybersecurity partner. Protecting you online, always.</p>
-        <a href="#contact" class="btn">Get Started</a>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We provide top-notch cybersecurity solutions to ensure your data remains safe.</p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-box">
-            <h3>Network Security</h3>
-            <p>Protect your business with our advanced network security solutions.</p>
+    <header>Welcome to My Website</header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <h1>Hello, Azure DevOps!</h1>
+            <p>This is my first webpage.</p>
         </div>
-        <div class="service-box">
-            <h3>Penetration Testing</h3>
-            <p>We test your systems for vulnerabilities and provide detailed reports.</p>
+        <button class="button" onclick="displayMessage()">Click Me</button>
+        <p id="message" style="text-align: center;"></p>
+        <div class="quote">“The best way to predict the future is to create it.” – Peter Drucker</div>
+        <div class="image-container">
+            <img src="https://source.unsplash.com/500x300/?technology" alt="Technology Image">
         </div>
-    </section>
-
-    <section id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial">
-            <p>"Cyber Defender helped us secure our data like never before!"</p>
-            <h4>- John Doe</h4>
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button>Send Message</button>
         </div>
-        <div class="testimonial">
-            <p>"Professional, reliable, and highly skilled cybersecurity experts."</p>
-            <h4>- Jane Smith</h4>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Cyber Defender. All rights reserved.</p>
-    </footer>
+    </div>
+    <script>
+        function displayMessage() {
+            document.getElementById('message').innerText = "You clicked the button!";
+        }
+    </script>
 </body>
 </html>
